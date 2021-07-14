@@ -1,0 +1,35 @@
+server:
+  port: 1090
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: group-id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      bootstrap-servers: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+  application:
+    name: e-stock-market
+  datasource:
+    url: jdbc:sqlserver://javatechie.database.windows.net:1433;databaseName=iiht;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: cognizant
+    password: CTS@1234
+  jpa:
+    show-sql: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    instance: null
+    preferIpAddress: true
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    com.cts.iiht: INFO
+    org.hibernate.SQL: INFO
+    org.apache.kafka: ERROR

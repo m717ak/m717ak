@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "c951a2d9-5b03-4986-bf13-ec4f00fa7dda",
+		"name": "IIHT usecase-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:1090/api/v1.0/market/company/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"C333\",\r\n    \"name\": \"Cognizant\",\r\n    \"ceo\": \"Brain\",\r\n    \"stockExchange\": \"NSE\",\r\n    \"turnOver\": 100000001,\r\n    \"website\": \"www.be.cognizant.com/\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1090/api/v1.0/market/company/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"company",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1090/api/v1.0/market/company/info/C333",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1090/api/v1.0/market/company/info/C333",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"company",
+						"info",
+						"C333"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1090/api/v1.0/market/stock/add/C333",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"companyCode\": \"C333\",\r\n  \"stockPrice\": 76986.2321\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1090/api/v1.0/market/stock/add/C333",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"stock",
+						"add",
+						"C333"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1090/api/v1.0/market/company/getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1090/api/v1.0/market/company/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"company",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1090/api/v1.0/market/company/delete/C333",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1090/api/v1.0/market/company/delete/C333",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"company",
+						"delete",
+						"C333"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1090/api/v1.0/market/stock/get/C101/2021-05-23/2021-05-23",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1090/api/v1.0/market/stock/get/C101/2021-05-23/2021-05-23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1090",
+					"path": [
+						"api",
+						"v1.0",
+						"market",
+						"stock",
+						"get",
+						"C101",
+						"2021-05-23",
+						"2021-05-23"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
